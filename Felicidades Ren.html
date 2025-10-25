@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Felicidades!</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #ffe5ec, #fff);
+    text-align: center;
+    padding: 30px;
+  }
+  h1 {
+    color: #ff4d6d;
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.2em;
+    color: #444;
+  }
+  .fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  img {
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body>
+  <h1>🎉 ¡Felicidades Reni! 🎉</h1>
+  <p>Espero que hoy te la pases increile te quiero mucho eres mi mejor amiga</p>
+  
+  <div class="fotos">
+    <img src="foto1.jpeg" alt="Foto 1">
+    <img src="foto2.jpeg" alt="Foto 2">
+    <img src="foto3.jpeg" alt="Foto 3">
+  </div>
+
+  <p>No sabes lo mucho que te quiero y valoro que estes en mi vida eres la mejor amiga del mundo❤️ </p>
+  <p>Gracias por siempre estar cuando te necesito eres una gran persona y espero siempre ser amigos :)</p>
+</body>
+</html>
+
+<!-- 🎵 Botón para reproducir música -->
+<button id="playButton">🎵 Reproducir música</button>
+<audio id="audio" loop>
+  <source src="musica1.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+<script>
+  const btn = document.getElementById('playButton');
+  const audio = document.getElementById('audio');
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = '⏸️ Pausar música';
+    } else {
+      audio.pause();
+      btn.textContent = '🎵 Reproducir música';
+    }
+  });
+</script>
+
